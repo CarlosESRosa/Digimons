@@ -15,8 +15,8 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
 <details>
 <summary><strong>Como rodar</strong></summary>
   - Na raiz do projeto rode o comando `docker-compose up` para criar seu docker-compose, esse container possui o postgres com as variaveis já definidas. Caso não queira utilizar Docker, as variaveis para conexão com o banco de dados estão no arquivo ./Backend/src/database/config/database.js<br />
-  - Com o Docker-compose criado, na pasta ./Backend rode o comando `npm install` para instalar todas as dependencias e `npm run db:reset` para criar o banco, criar as tabelas e popular o banco de dados.<br />
-  - Com o banco de dados já criado rode o comando `npm run dev` para startar a API, irá aparecer a menssagem "API escutando a rota http://localhost:3001" no console caso tudo tenha ocorrido como o esperado.
+  - Com a conexão com o Banco de Dados criada, na pasta ./Backend rode o comando `npm install` para instalar todas as dependencias e `npm run db:reset` para criar o banco, criar as tabelas e popular o banco de dados.<br />
+  - Com o Banco de Dados já criado e populado rode o comando `npm run dev` para startar a API, irá aparecer a menssagem "API escutando a rota http://localhost:3001" no console caso tudo tenha ocorrido como o esperado.
 </details>
 <br />
 <details>
