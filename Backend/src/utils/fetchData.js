@@ -1,4 +1,4 @@
-const axios = require('axios/dist/node/axios.cjs'); // node
+const axios = require('axios');
 
 const fetchDigimons = async () => {
 	const response = await axios({
