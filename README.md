@@ -23,9 +23,9 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
 **`GET /`**
  - Use o endpoint `GET /` para testar a api (Ela não passa por nenhuma validação e não se conecta com o banco), em caso de sucesso retorna:
 ```json
-{
-	"message": "API funcionando"
-}
+  {
+    "message": "API funcionando"
+  }
 ```
 
 **`GET /digimons`**
@@ -33,23 +33,23 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
 ```json
 [
   {
-		"id": 1,
-		"name": "Koromon",
-		"img": "https://digimon.shadowsmith.com/img/koromon.jpg",
-		"level": "In Training"
-	},
-	{
-		"id": 2,
-		"name": "Tsunomon",
-		"img": "https://digimon.shadowsmith.com/img/tsunomon.jpg",
-		"level": "In Training"
-	},
-	{
-		"id": 3,
-		"name": "Yokomon",
-		"img": "https://digimon.shadowsmith.com/img/yokomon.jpg",
-		"level": "In Training"
-	}...
+    "id": 1,
+    "name": "Koromon",
+    "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
+    "level": "In Training"
+  },
+  {
+    "id": 2,
+    "name": "Tsunomon",
+    "img": "https://digimon.shadowsmith.com/img/tsunomon.jpg",
+    "level": "In Training"
+  },
+  {
+    "id": 3,
+    "name": "Yokomon",
+    "img": "https://digimon.shadowsmith.com/img/yokomon.jpg",
+    "level": "In Training"
+  }
 ]
 ```
 
@@ -59,23 +59,23 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
 ```json
 [
   {
-		"id": 8,
-		"name": "Agumon",
-		"img": "https://digimon.shadowsmith.com/img/agumon.jpg",
-		"level": "Rookie"
-	},
-	{
-		"id": 48,
-		"name": "Pagumon",
-		"img": "https://digimon.shadowsmith.com/img/pagumon.jpg",
-		"level": "In Training"
-	},
-	{
-		"id": 148,
-		"name": "SnowAgumon",
-		"img": "https://digimon.shadowsmith.com/img/snowagumon.jpg",
-		"level": "Rookie"
-	}
+    "id": 8,
+    "name": "Agumon",
+    "img": "https://digimon.shadowsmith.com/img/agumon.jpg",
+    "level": "Rookie"
+  },
+  {
+    "id": 48,
+    "name": "Pagumon",
+    "img": "https://digimon.shadowsmith.com/img/pagumon.jpg",
+    "level": "In Training"
+  },
+  {
+    "id": 148,
+    "name": "SnowAgumon",
+    "img": "https://digimon.shadowsmith.com/img/snowagumon.jpg",
+    "level": "Rookie"
+  }
 ]
 ```
 
@@ -84,23 +84,23 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
 ```json
 [
   {
-		"id": 89,
-		"name": "VenomMyotismon",
-		"img": "https://digimon.shadowsmith.com/img/venommyotismon.jpg",
-		"level": "Mega"
-	},
-	{
-		"id": 90,
-		"name": "WarGreymon",
-		"img": "https://digimon.shadowsmith.com/img/wargreymon.jpg",
-		"level": "Mega"
-	},
-	{
-		"id": 91,
-		"name": "MetalGarurumon",
-		"img": "https://digimon.shadowsmith.com/img/metalgarurumon.jpg",
-		"level": "Mega"
-	}...
+    "id": 89,
+    "name": "VenomMyotismon",
+    "img": "https://digimon.shadowsmith.com/img/venommyotismon.jpg",
+    "level": "Mega"
+  },
+  {
+    "id": 90,
+    "name": "WarGreymon",
+    "img": "https://digimon.shadowsmith.com/img/wargreymon.jpg",
+    "level": "Mega"
+  },
+  {
+    "id": 91,
+    "name": "MetalGarurumon",
+    "img": "https://digimon.shadowsmith.com/img/metalgarurumon.jpg",
+    "level": "Mega"
+  }
 ]
 ```
 
@@ -108,41 +108,40 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
  - Cria um novo digimon no banco de dados.
  - Você precisa passar o seguinte payload no body da requisição
  ```json
-	{
-		"name": "Koromon",
-		"img": "https://digimon.shadowsmith.com/img/koromon.jpg",
-		"level": "In Training"
-	}
+  {
+    "name": "Koromon",
+    "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
+    "level": "In Training"
+  }
 ```
  - Em caso de sucesso retorna o digimon criado e o código 200
 ```json
-	{
-		"id": 218,
-		"name": "Koromon",
-		"img": "https://digimon.shadowsmith.com/img/koromon.jpg",
-		"level": "In Training"
-	}
-
+{
+  "id": 218,
+  "name": "Koromon",
+  "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
+  "level": "In Training"
+}
 ```
 
 **`PUT /digimons/:id`**
  - Atualiza um digimon já existente no banco de dados.
  - Você precisa passar o seguinte payload no body da requisição:
  ```json
-	{
-		"name": "Koromon",
-		"img": "https://digimon.shadowsmith.com/img/koromon.jpg",
-		"level": "In Training"
-	}
+{
+  "name": "Koromon",
+  "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
+  "level": "In Training"
+}
 ```
  - Em caso de sucesso retorna a seguinte resposta com o código 200
 ```json
-	{
-		"id": 20,
-		"name": "Koromon22",
-		"img": "https://digimon.shadowsmith.com/img/koromon.jpg",
-		"level": "In Training"
-	}
+{
+  "id": 20,
+  "name": "Koromon22",
+  "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
+  "level": "In Training"
+}
 
 ```
 
@@ -150,10 +149,10 @@ API de Digimons, é possível encontrar todos Digimons, encontrar seu digimon fa
  - Deleta um digimon do banco de dados.
  - Em caso de sucesso retorna a seguinte resposta com o código 200
 ```json
-	{
-		"success": true,
-		"message": "Digimon excluído com sucesso"
-	}
+{
+  "success": true,
+  "message": "Digimon excluído com sucesso"
+}
 
 ```
 
